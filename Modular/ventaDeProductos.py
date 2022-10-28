@@ -1,7 +1,7 @@
 from os import remove
 import os
 
-from numpy import empty
+
 
 #Listas:
 nombreProducto = []
@@ -10,7 +10,7 @@ cVendida = []
 total = []
 
 
-def menu(nombreProducto, precioProducto, cVendida, total):
+def menu(nombre, precio, cantidad, totalidad):
     while True:
         print("------- Bienvenido a la venta --------")
         print("1. Agregar un producto")
@@ -52,10 +52,10 @@ def menu(nombreProducto, precioProducto, cVendida, total):
             print("Digite una opcion valida!!")
             print()
 
-    return nombreProducto, precioProducto, cVendida, total
+    return nombre, precio, cantidad, totalidad
     
 
-def agregar(nombreProducto, precioProducto, cVendida, total):
+def agregar(nombre, precio, cantidad, totalidad):
     print("**** Agregará un producto ****") 
     prod = input("Ingrese el nombre del producto: ")
     nombreProducto.append(prod)
@@ -64,10 +64,10 @@ def agregar(nombreProducto, precioProducto, cVendida, total):
     total.append(0)
     cVendida.append(0)
 
-    return nombreProducto, precioProducto, cVendida, total
+    return nombre, precio, cantidad, totalidad
     
 
-def venta(nombreProducto, precioProducto, cVendida, total):
+def venta(nombre, precio, cantidad, totalidad):
     print("****Realizará una venta ****")
     np = input("Ingrese el nombre del producto que desea comprar: ")
 
@@ -84,10 +84,10 @@ def venta(nombreProducto, precioProducto, cVendida, total):
         
                     
 
-    return nombreProducto, precioProducto, cVendida, total
+    return nombre, precio, cantidad, totalidad
     
 
-def borrar(nombreProducto, precioProducto, cVendida, total):
+def borrar(nombre, precio, cantidad, totalidad):
     print("**** Borrará un producto****")
     pBorrar = input("Ingrese el nombre del producto que desea elimar: ")
             
@@ -102,9 +102,9 @@ def borrar(nombreProducto, precioProducto, cVendida, total):
     else:
         print("No se encuentra ese elemento!!")
 
-    return nombreProducto, precioProducto, cVendida, total
+    return nombre, precio, cantidad, totalidad
 
-def borrarTodo(nombreProducto, precioProducto, cVendida, total):
+def borrarTodo(nombre, precio, cantidad, totalidad):
     print("**** Borrará todos los productos ****")
     nombreProducto.clear()
     precioProducto.clear()
@@ -116,9 +116,9 @@ def borrarTodo(nombreProducto, precioProducto, cVendida, total):
     else:
         print("Error al eliminar los productos")
     
-    return nombreProducto, precioProducto, cVendida, total
+    return nombre, precio, cantidad, totalidad
 
-def info(nombreProducto, precioProducto, cVendida, total):
+def info(nombre, precio, cantidad, totalidad):
     print("**** Mostrará la información ****")
     print("Nombre del producto: "+"\t"+"Precio producto: "+"\t"+"Cantidad de producto vendida: "+"\t"+"Total: ")  
     for a, b, c, d in zip(nombreProducto, precioProducto, cVendida, total):
@@ -127,10 +127,10 @@ def info(nombreProducto, precioProducto, cVendida, total):
     os.system("pause")
     os.system("cls")
     print()
-    return nombreProducto, precioProducto, cVendida, total
+    return nombre, precio, cantidad, totalidad
 
-def main(nombreProducto, precioProducto, cVendida, total):
+def main(nombre, precio, cantidad, totalidad):
     menu(nombreProducto, precioProducto, cVendida, total)
-    return nombreProducto, precioProducto, cVendida, total
+    return nombre, precio, cantidad, totalidad
 
 main(nombreProducto, precioProducto, cVendida, total)
