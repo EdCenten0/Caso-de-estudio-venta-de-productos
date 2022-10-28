@@ -1,4 +1,4 @@
-
+# Se agrega un producto.
 def agregar(nombre, precio, cantidad, totalidad):
     print("**** Agregará un producto ****") 
     prod = input("Ingrese el nombre del producto: ")

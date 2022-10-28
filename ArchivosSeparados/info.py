@@ -1,5 +1,6 @@
 import os
 
+# Se muestra la informacion de todos los productos.
 def info(nombre, precio, cantidad, totalidad):
     print("**** Mostrará la información ****")
     print("Nombre del producto: "+"\t"+"Precio producto: "+"\t"+"Cantidad de producto vendida: "+"\t"+"Total: ")  

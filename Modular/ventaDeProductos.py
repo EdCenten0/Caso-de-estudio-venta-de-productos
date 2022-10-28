@@ -1,15 +1,24 @@
+'''
+Algoritmo de caso de estudio de venta de productos
+Clase: ALgoritmos y estructuras de datos
+Hecho por: Carlos Eduardo Chavarria Centeno
+28-10-22.
+
+'''
+
+
 from os import remove
 import os
 
 
 
-#Listas:
+# Listas:
 nombreProducto = []
 precioProducto = []
 cVendida = []
 total = []
 
-
+# Menú de funciones
 def menu(nombre, precio, cantidad, totalidad):
     while True:
         print("------- Bienvenido a la venta --------")
@@ -22,28 +31,28 @@ def menu(nombre, precio, cantidad, totalidad):
         opc = int(input("Digite la opcion que desee: "))
         print()
 
-        #Agregar los productos
+        # Agregar los productos.
         if(opc==1):
                  
             agregar(nombreProducto, precioProducto, cVendida, total)
             
-        #Realizar la venta
+        # Realizar la venta.
         elif(opc==2):
             venta(nombreProducto, precioProducto, cVendida, total)
 
-        #Borrar un producto
+        # Borrar un producto.
         elif(opc==3):
             borrar(nombreProducto, precioProducto, cVendida, total)
 
-        #Borrar todos los productos de la venta
+        # Borrar todos los productos de la venta.
         elif(opc==4):
             borrarTodo(nombreProducto, precioProducto, cVendida, total)
 
-        #Mostrar los elementos de la venta
+        # Mostrar los elementos de la venta.
         elif(opc==5):
             info(nombreProducto, precioProducto, cVendida, total)
             
-            #Salir del programa
+        # Salir del programa.
         elif(opc==6):
             print("**** Usted ha salido del programa ****")
             break
@@ -54,7 +63,7 @@ def menu(nombre, precio, cantidad, totalidad):
 
     return nombre, precio, cantidad, totalidad
     
-
+# Se agrega un producto.
 def agregar(nombre, precio, cantidad, totalidad):
     print("**** Agregará un producto ****") 
     prod = input("Ingrese el nombre del producto: ")
@@ -66,7 +75,7 @@ def agregar(nombre, precio, cantidad, totalidad):
 
     return nombre, precio, cantidad, totalidad
     
-
+# Se vende un producto.
 def venta(nombre, precio, cantidad, totalidad):
     print("****Realizará una venta ****")
     np = input("Ingrese el nombre del producto que desea comprar: ")
@@ -86,7 +95,7 @@ def venta(nombre, precio, cantidad, totalidad):
 
     return nombre, precio, cantidad, totalidad
     
-
+# Se borra un producto.
 def borrar(nombre, precio, cantidad, totalidad):
     print("**** Borrará un producto****")
     pBorrar = input("Ingrese el nombre del producto que desea elimar: ")
@@ -104,13 +113,14 @@ def borrar(nombre, precio, cantidad, totalidad):
 
     return nombre, precio, cantidad, totalidad
 
+# Se borran todos los productos.
 def borrarTodo(nombre, precio, cantidad, totalidad):
     print("**** Borrará todos los productos ****")
     nombreProducto.clear()
     precioProducto.clear()
     cVendida.clear()
     total.clear()
-    #cantidadProducto.clear()
+    
     if nombreProducto==[] and precioProducto==[] and cVendida==[] and total==[]:
         print("Datos eliminados con exito!!")
     else:
@@ -118,6 +128,7 @@ def borrarTodo(nombre, precio, cantidad, totalidad):
     
     return nombre, precio, cantidad, totalidad
 
+# Se muestra la informacion de todos los productos.
 def info(nombre, precio, cantidad, totalidad):
     print("**** Mostrará la información ****")
     print("Nombre del producto: "+"\t"+"Precio producto: "+"\t"+"Cantidad de producto vendida: "+"\t"+"Total: ")  
@@ -129,6 +140,7 @@ def info(nombre, precio, cantidad, totalidad):
     print()
     return nombre, precio, cantidad, totalidad
 
+# La funcion principal main.
 def main(nombre, precio, cantidad, totalidad):
     menu(nombreProducto, precioProducto, cVendida, total)
     return nombre, precio, cantidad, totalidad

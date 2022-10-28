@@ -1,5 +1,4 @@
-
-
+# Se borra un producto.
 def borrar(nombre, precio, cantidad, totalidad):
     print("**** Borrará un producto****")
     pBorrar = input("Ingrese el nombre del producto que desea elimar: ")

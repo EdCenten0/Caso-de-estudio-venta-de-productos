@@ -1,9 +1,17 @@
+'''
+Algoritmo de caso de estudio de venta de productos
+Clase: ALgoritmos y estructuras de datos
+Hecho por: Carlos Eduardo Chavarria Centeno
+28-10-22.
+
+'''
+
 from os import remove
 import os
 
-from numpy import empty
 
-#Listas:
+
+# Listas:
 nombreProducto = []
 precioProducto = []
 cVendida = []
@@ -12,9 +20,10 @@ total = []
 
 
 
-print()
 
-#MENU:
+'''
+Menú de funciones.
+'''
 while True:
     print("------- Bienvenido a la venta --------")
     print("1. Agregar un producto")
@@ -26,7 +35,7 @@ while True:
     opc = int(input("Digite la opcion que desee: "))
     print()
 
-    #Agregar los productos
+    # Agregar los productos.
     if(opc==1):
         print("**** Agregará un producto ****")
         print() 
@@ -37,13 +46,12 @@ while True:
         precioProducto.append(prec)
         total.append(0)
         cVendida.append(0)
-        '''cant = int(input("Digite la cantidad del producto: "))
-        cantidadProducto.append(cant)'''
+        
             
         print()      
      
         
-     #Realizar la venta
+    # Realizar la venta
     elif(opc==2):
         print("****Realizará una venta ****")
         np = input("Ingrese el nombre del producto que desea comprar: ")
@@ -70,7 +78,7 @@ while True:
             print()
                 
 
-     #Borrar un producto
+    # Borrar un producto.
     elif(opc==3):
         print("**** Borrará un producto****")
         pBorrar = input("Ingrese el nombre del producto que desea elimar: ")
@@ -86,20 +94,20 @@ while True:
         else:
             print("No se encuentra ese elemento!!")
 
-     #Borrar todos los productos de la venta
+    # Borrar todos los productos de la venta.
     elif(opc==4):
         print("**** Borrará todos los productos ****")
         nombreProducto.clear()
         precioProducto.clear()
         cVendida.clear()
         total.clear()
-        #cantidadProducto.clear()
+        
         if nombreProducto==[] and precioProducto==[] and cVendida==[] and total==[]:
             print("Datos eliminados con exito!!")
         else:
             print("Error al eliminar los productos")
 
-     #Mostrar los elementos de la venta
+    # Mostrar los elementos de la venta.
     elif(opc==5):
             print("**** Mostrará la información ****")
             print("Nombre del producto: "+"\t"+"Precio producto: "+"\t"+"Cantidad de producto vendida: "+"\t"+"Total: ")
@@ -113,7 +121,7 @@ while True:
             os.system("cls")
             print()
         
-        #Salir del programa
+    # Salir del programa.
     elif(opc==6):
         print("**** Usted ha salido del programa ****")
         break

@@ -1,5 +1,4 @@
-
-
+# Se vende un producto.
 def venta(nombre, precio, cantidad, totalidad):
     print("****Realizará una venta ****")
     np = input("Ingrese el nombre del producto que desea comprar: ")

@@ -4,6 +4,7 @@ from borrarTodo import borrarTodo
 from info import info
 from venta import venta
 
+# Menú de funciones
 def menu(nombre, precio, cantidad, totalidad):
     while True:
         print("------- Bienvenido a la venta --------")
@@ -16,28 +17,28 @@ def menu(nombre, precio, cantidad, totalidad):
         opc = int(input("Digite la opcion que desee: "))
         print()
 
-        #Agregar los productos
+        # Agregar los productos.
         if(opc==1):
                  
             agregar(nombre, precio, cantidad, totalidad)
             
-        #Realizar la venta
+        # Realizar la venta.
         elif(opc==2):
             venta(nombre, precio, cantidad, totalidad)
 
-        #Borrar un producto
+        # Borrar un producto.
         elif(opc==3):
             borrar(nombre, precio, cantidad, totalidad)
 
-        #Borrar todos los productos de la venta
+        # Borrar todos los productos de la venta.
         elif(opc==4):
             borrarTodo(nombre, precio, cantidad, totalidad)
 
-        #Mostrar los elementos de la venta
+        # Mostrar los elementos de la venta.
         elif(opc==5):
             info(nombre, precio, cantidad, totalidad)
             
-            #Salir del programa
+        # Salir del programa.
         elif(opc==6):
             print("**** Usted ha salido del programa ****")
             break
