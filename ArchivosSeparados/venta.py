@@ -1,20 +1,20 @@
 
 
-def venta(nombreProducto, precioProducto, cVendida, total):
+def venta(nombre, precio, cantidad, totalidad):
     print("****Realizará una venta ****")
     np = input("Ingrese el nombre del producto que desea comprar: ")
 
-    if np in nombreProducto:
-        ind = nombreProducto.index(np)
+    if np in nombre:
+        ind = nombre.index(np)
         cvp = int(input("Ingrese la cantidad de producto a comprar: "))
-        res = cvp * precioProducto[ind]
+        res = cvp * precio[ind]
         print("Su total es: ", res)
-        total[ind] = total[ind] + res
-        cVendida[ind] = cVendida[ind] + cvp
+        totalidad[ind] = totalidad[ind] + res
+        cantidad[ind] = cantidad[ind] + cvp
         print()
     else:
         print("Producto no encontrado!!")
         
                     
 
-    return nombreProducto, precioProducto, cVendida, total
+    return nombre, precio, cantidad, totalidad

@@ -1,15 +1,15 @@
 
 
-def borrarTodo(nombreProducto, precioProducto, cVendida, total):
+def borrarTodo(nombre, precio, cantidad, totalidad):
     print("**** Borrará todos los productos ****")
-    nombreProducto.clear()
-    precioProducto.clear()
-    cVendida.clear()
-    total.clear()
+    nombre.clear()
+    precio.clear()
+    cantidad.clear()
+    totalidad.clear()
     #cantidadProducto.clear()
-    if nombreProducto==[] and precioProducto==[] and cVendida==[] and total==[]:
+    if nombre==[] and precio==[] and cantidad==[] and totalidad==[]:
         print("Datos eliminados con exito!!")
     else:
         print("Error al eliminar los productos")
     
-    return nombreProducto, precioProducto, cVendida, total
+    return nombre, precio, cantidad, totalidad
